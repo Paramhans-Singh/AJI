@@ -7,6 +7,12 @@ const caseSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
+    fillingNumber: {
+      type: String,
+    },
+    CNRnumber: {
+      type: String,
+    },
     caseTitle: {
       type: String,
       required: true,
@@ -35,6 +41,10 @@ const caseSchema = new mongoose.Schema(
       ref: "Judge",
     },
     advocates: {
+      type: Array,
+      required: true,
+    },
+    partiesInvolved: {
       type: Array,
       required: true,
     },
