@@ -1,0 +1,90 @@
+.navbar{
+    height: 80px;
+    width: 100%;
+    padding: 2rem 8%;
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    position: sticky;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: all 1s ease-in-out;
+    top: 0;
+    left: 0;
+    gap: 40px;
+}
+.navbar-logo{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+}
+.logo-image{
+    height: 54px;
+}
+.logo-image img{
+    height: 100%;
+    width: 100%;
+}
+.logo-text{
+    font-size: 2.7rem;
+    font-weight: 700;
+    background-color: lightblue;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+}
+.company-name{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+.navbar-links-con{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+.navbar-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.8rem;
+    cursor: pointer;
+}
+.navbar-link:hover{
+    color: lightblue;
+}
+.navbar-link{
+    font-size: 1.1rem;
+    list-style: none;
+}
+.contact-link{
+    justify-self: flex-end;
+    align-items: flex-end;
+    font-size: 1.2rem;
+    list-style: none;
+    color: lightblue;
+    border: 1px solid lightblue;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.contact-link:hover{
+    background-color: lightblue;
+    color: white;
+}
+
+.active{
+    background-color: white;
+    .logo-text{
+        background: lightblue;
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

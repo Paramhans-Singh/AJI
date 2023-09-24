@@ -1,0 +1,19 @@
+.administratorDashboard{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #E6FDFF;
+    justify-content: space-between;
+    padding-right: 40px;
+}
+.ScheduleBox{
+    width: 35%;
+    height: max-content;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 60px!important;
+    justify-content: space-evenly;
+    padding: 20px;
+}

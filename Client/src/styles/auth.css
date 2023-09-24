@@ -1,0 +1,113 @@
+.login{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    height: 100%;
+    width: 50%;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+
+}
+.signup{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    height: 100%;
+    width: 50%;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+
+
+}
+.auth-heading{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease-in-out;
+
+
+}
+.auth-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+
+}
+.inputField-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 5px;
+    transition: all 0.3s ease-in-out;
+
+}
+.inputField{
+    justify-self: center;
+    width: 80%;
+    border: none;
+    outline: none;
+    height: 40px;
+    padding: 5px 10px;
+    background-color: #E2FBF5;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+
+}
+.errorMessage{
+    width: 80%;
+    color: red;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: 0.25rem;
+    padding-left: 0.5rem;
+    transition: all 0.3s ease-in-out;
+
+}
+.submitBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border: none;
+    outline: none;
+    height: 40px;
+    padding: 5px 10px;
+    background-color: #231651;
+    border-radius: 15px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+}
+.exists{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: all 0.3s ease-in-out;
+
+}
+.auth-link{
+    color: blue;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+}

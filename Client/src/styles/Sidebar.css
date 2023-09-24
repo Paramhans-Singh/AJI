@@ -1,0 +1,78 @@
+.sidebar{
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+.sidebar-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    height: 10%;
+    background-color: #E6FDFF;
+    border-radius: 10px;
+    color: #006195;
+}
+.header-name{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.functionalities{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    height: 60%;
+    padding: 10px;
+
+}
+.functionality{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+.functionality:hover{
+    color: #006195;
+    background-color: #E6FDFF;
+}
+.functionality.active{
+    color: #006195;
+    background-color: #E6FDFF;
+    font-weight: 600;
+}
+.functionality i{
+    font-size: 22px;
+    color: #71839baf;
+}
+.others{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 30%;
+    align-items: center;
+    padding: 0 10px;
+}
+.notification-count{
+    background-color: red;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 50%;
+    font-size: 15px;
+    margin-left: 1.5rem;
+    font-weight: 600;
+}

@@ -1,0 +1,58 @@
+.AboutUs{
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background-color: lightblue;
+    padding: 2rem 8%;
+}
+.AboutUs-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    width: 50%;
+}
+.AboutUs-title{
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #fff;
+}
+.AboutUs-text{
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #eee;
+    line-height: 1.5;
+    width: 100%;
+    padding-left: 1rem;
+}
+.AboutUs-button{
+    width: max-content;
+    font-size: 1.5rem;
+    list-style: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    background-color: transparent;
+}
+.AboutUs-button:hover{
+    background-color: #fff;
+    color: #333;
+}
+.AboutUs-image{
+    aspect-ratio: 1/1;
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.AboutUs-image img{
+    height: 100%;
+    width: 100%;
+
+}
