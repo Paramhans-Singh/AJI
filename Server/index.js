@@ -16,11 +16,9 @@ const cors = require('cors')
 const cookieParser = require('cookie-parser');
 const db = require('./config/mongoose');
 
-// used for session cookie
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
 const passportJWT = require('./config/passport-jwt-strategy');
-// const passportGoogle = require('./config/passport-google-oauth2-strategy');
 
 
 const mongoStore = new MongoStore({
@@ -28,7 +26,6 @@ const mongoStore = new MongoStore({
     collection: 'sessions', // Collection name for sessions
   });
   
-  // Initialize the express-session middleware with the MongoStore
   app.use(
     session({
       secret: 'param', // Replace with a strong secret key
@@ -38,25 +35,9 @@ const mongoStore = new MongoStore({
     })
   );
 
-
-//   // Serve static files from the build directory
-// app.use(express.static(path.join(__dirname, '../Client')));
-
-// // Define your API routes here
-
-// // Handle React routing on the server
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, '../Client', 'index.html'));
-// });
-
 dotenv.config()
 
-const authRoute = require('./routes/auth');
-const judgeRoute = require('./routes/judge');
-const userRoute = require('./routes/user');
-const caseRoute = require('./routes/case');
-
-
+app.use("/", require("./routes/index"));
 
 app.use(
     cors({
@@ -72,15 +53,6 @@ mongoose.connect(process.env.MONGO_URL, {
     useUnifiedTopology: true,
 }).then(() => console.log("Connected to MongoDB Successfully!"))
 .catch(err => console.log("Error in connecting to MongoDB"));
-
-
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-app.use("/api/auth", authRoute);
-app.use("/api/users", userRoute);
-app.use("/api/case", caseRoute);
-app.use("/api/judge", judgeRoute);
 
 
 app.listen(port, function(err){

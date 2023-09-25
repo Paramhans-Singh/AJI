@@ -1,12 +1,17 @@
 const express = require('express');
-
 const router = express.Router();
-const homeController = require('../controllers/homeController');
-
-console.log('router loaded');
-
+const homeController = require("../controllers/homeController");
+const judgeController = require("../controllers/judgeController");
+const caseController = require("../controllers/caseController");
 
 router.get('/', homeController.home);
-router.use('/users', require('./user'));
+router.get("/judge/:judgeName",judgeController.getJudgeDetails);
+router.get("/case/:caseNumber", caseController.getCaseDetails);
+
+// router.get("/auth",);
+// router.get("/users",);
+
+
+console.log('router loaded');
 
 module.exports = router;

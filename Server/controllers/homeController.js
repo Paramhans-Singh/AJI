@@ -1,8 +1,4 @@
-module.exports.home = async function(req, res){
-    
-        return res.render('home', {
-            title: "Home | caseIQ",
-        });    
-}
 
-
+module.exports.home = function(req, res) {
+    return res.json({ message: 'Hello, World!' });
+  };
