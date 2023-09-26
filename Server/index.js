@@ -9,15 +9,14 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
 const cors = require('cors')
+
+dotenv.config()
+
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => console.log("Connected to MongoDB Successfully!"))
-.catch(err => console.log("Error in connecting to MongoDB"));
-
-
-
-dotenv.config()
+.catch(err => console.log(err));
 
 
 app.use(
@@ -25,15 +24,12 @@ app.use(
         origin: "http://localhost:5173",
     })
     );
+
 app.use("/", require("./routes/index"));
 
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"))
-
-
-
-
 
 app.listen(port, function(err){
     if (err){

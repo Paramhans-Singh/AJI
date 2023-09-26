@@ -1,4 +1,5 @@
 const dummyCases = require('../DummyData/CaseDummy'); 
+const mongoose = require("mongoose");
 
 module.exports.getCaseDetails = function(req,res){
     const {caseNumber} = req.params;
@@ -23,20 +24,20 @@ module.exports.getCaseList = function(req,res){
 
 module.exports.predictHearings = function(req,res){
   const {caseNumber} = req.params;
-
-  const body = {
-    caseNumber: caseNumber,
-    SectionList: [],
-    ActsList: [],
+  const caseData = dummyCases.find((c) => c.caseNumber === caseNumber);
+  
+  if (!caseData) {
+    return res.status(404).json({ error: 'Case not found' });
   }
 
+  axios.post('http://localhost:8000/', {
+    sectionList: caseData.SectionList,
+    actsList: caseData.ActsList,
+    type: caseData.caseType
+  })
+  .then((response)=>{
+    res.json(response);
+  }
+  )
 
-
-
-
-
-
-  axios.post('http://localhost:5000/predict', {
-    caseNumber: caseNumber
-  });
 }

@@ -1,3 +1,6 @@
+const mongoose = require("mongoose");
+const JudgeNew = require("../models/judgeModel"); // Replace with the correct path to your model file
+
 const dummyJudgeData = [
     {
       judgeName: "Judge Smith",
@@ -114,3 +117,11 @@ const dummyJudgeData = [
   
   module.exports = dummyJudgeData;
   
+
+  JudgeNew.insertMany(dummyJudgeData)
+    .then(() => {
+      console.log("Dummy Judge inserted successfully");
+    })
+    .catch((error) => {
+      console.error("Error inserting dummy judge:", error);
+    });
