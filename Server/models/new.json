@@ -1,0 +1,16 @@
+{
+  "caseNumber": "CV7890/2023",
+  "fillingNumber": "F8901",
+  "CNRnumber": "CNR1234",
+  "caseTitle": "ABC Corporation vs. XYZ Inc.",
+  "caseType": "Civil",
+  "caseParties": ["ABC Corporation", "XYZ Inc."],
+  "caseFilingDate": "2023-07-10",
+  "caseStatus": "Ongoing",
+  "nextHearingDate": "2023-09-25",
+  "judicialOfficer": "65108659ef2f25e7730d61f8",
+  "advocates": ["Michael Johnson", "Sophia Davis"],
+  "partiesInvolved": ["ABC Corporation", "XYZ Inc.", "Witnesses"],
+  "caseDisposition": null,
+  "documentsFiled": ["Complaint", "Evidence", "Counterclaim"]
+}

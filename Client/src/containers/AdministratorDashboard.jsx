@@ -8,12 +8,13 @@ import CaseContainer from './CaseContainer';
 
 
 const AdministratorDashboard = () => {
-  const [dashboard, setDashboard] = useState(true)
-  const [Availablity, setAvailablity] = useState(false)
+  //TODO Changed
+  // const [dashboard, setDashboard] = useState(false)
+  const [Availablity, setAvailablity] = useState(true)
     const [Schedule, setSchedule] = useState(false)
     const actions = {
-      dashboard:dashboard,
-      setDashboard,
+      // dashboard:dashboard,
+      // setDashboard,
       Availablity:Availablity, 
       setAvailablity, 
       Schedule:Schedule, 
@@ -27,7 +28,9 @@ const AdministratorDashboard = () => {
       }
       {Availablity && <>
       <JudgeList/>
-      <div className='ScheduleBox'>
+      
+      <div className='ScheduleBox' >
+        <CalenderBox/>
         <Scheduler/>
       </div>
       </>

@@ -8,11 +8,12 @@ const Sidebar = ({dashboard,setDashboard,Availablity,setAvailablity,Schedule,set
             <span className='header-name'>AJIN</span>
         </div>
         <div className='functionalities'>
-            <div className={dashboard ? "functionality active" : "functionality"} onClick={()=>{
-                setDashboard(!dashboard)
-                setSchedule(false)
-                setAvailablity(false)
-            }}
+            <div className={dashboard ? "functionality active" : "functionality"} 
+            // onClick={()=>{
+            //     setDashboard(!dashboard)
+            //     setSchedule(false)
+            //     setAvailablity(false)
+            // }}
             >
                 <i class="fa-solid fa-house-chimney"></i>
                 <span>Dashboard</span>
@@ -46,7 +47,7 @@ const Sidebar = ({dashboard,setDashboard,Availablity,setAvailablity,Schedule,set
             <div className='functionality'>
                 <i class="fa-solid fa-bell"></i>
                 <span>Notifications</span>
-                <span className='notification-count'>2</span>
+                {/* <span className='notification-count'>2</span> */}
             </div>
             <div className='functionality'>
                 <i class="fa-solid fa-cog"></i>

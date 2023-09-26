@@ -3,7 +3,7 @@ const JudgeNew = require("../models/judgeModel"); // Replace with the correct pa
 
 const dummyJudgeData = [
     {
-      judgeName: "Judge Smith",
+      judgeName: "Justice Srivastav",
       specialization: "Criminal Law",
       yearsOfExperience: 15,
       court: "District Court",
@@ -25,7 +25,7 @@ const dummyJudgeData = [
       },
     },
     {
-      judgeName: "Judge Johnson",
+      judgeName: "Justice Patel",
       specialization: "Family Law",
       yearsOfExperience: 10,
       court: "Family Court",
@@ -48,7 +48,7 @@ const dummyJudgeData = [
     },
     // Add more dummy judge data as needed
     {
-      judgeName: "Judge Williams",
+      judgeName: "Justice Pandey",
       specialization: "Criminal Law",
       yearsOfExperience: 20,
       court: "District Court",
@@ -70,7 +70,7 @@ const dummyJudgeData = [
       },
     },
     {
-      judgeName: "Judge Jones",
+      judgeName: "Justice Sukheja",
       specialization: "Family Law",
       yearsOfExperience: 15,
       court: "Family Court",
@@ -92,7 +92,7 @@ const dummyJudgeData = [
       },
     },
     {
-      judgeName: "Judge Brown",
+      judgeName: "Justice Sachdeva",
       specialization: "Criminal Law",
       yearsOfExperience: 25,
       court: "District Court",
@@ -118,10 +118,10 @@ const dummyJudgeData = [
   module.exports = dummyJudgeData;
   
 
-  JudgeNew.insertMany(dummyJudgeData)
-    .then(() => {
-      console.log("Dummy Judge inserted successfully");
-    })
-    .catch((error) => {
-      console.error("Error inserting dummy judge:", error);
-    });
+  // JudgeNew.insertMany(dummyJudgeData)
+  //   .then(() => {
+  //     console.log("Dummy Judge inserted successfully");
+  //   })
+  //   .catch((error) => {
+  //     console.error("Error inserting dummy judge:", error);
+  //   });

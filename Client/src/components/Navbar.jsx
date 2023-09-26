@@ -28,7 +28,7 @@ const Navbar = () => {
             {/* <img src="src/assets/images/BG.jpg" alt="logo" /> */}
           </div>
           <div>
-            <span className='logo-text'>CaseIQ</span>
+            <span className='logo-text'>AJI</span>
           </div>
         </div>
         <div className='navbar-links-con'>

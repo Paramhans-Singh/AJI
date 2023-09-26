@@ -29,9 +29,16 @@
     width: 100%;
     box-sizing: border-box;
     padding: 20px;
-    background-color: lightblue;
+    background-color: #9BFFE1;
+    /* color: white; */
+    font-size: 23px;
+    font-weight: bolder;
     border-radius: 30px;
     cursor: pointer;
+}
+.action:hover{
+    background-color: #000B6D;
+    color: white
 }
 .caseContainerBody{
     display: flex;

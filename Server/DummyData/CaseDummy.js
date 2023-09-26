@@ -20,6 +20,8 @@ const dummyCases = [
     PredictedHearings: 2,
     SectionList: [379],
     ActsList: ["The Indian Penal Code"],
+    age: 15,
+    hearing: 50,
   },
   {
     caseNumber: "CASE002",
@@ -31,7 +33,7 @@ const dummyCases = [
     caseFilingDate: new Date("2023-02-20"),
     caseStatus: "In Progress",
     nextHearingDate: new Date("2023-03-20"),
-    judicialOfficer:"65108650ef2f25e7730d61f7", // You can replace this with a valid ObjectID
+    judicialOfficer: "65108650ef2f25e7730d61f7", // You can replace this with a valid ObjectID
     advocates: ["Defense Attorney 1", "Prosecutor 1"],
     partiesInvolved: ["Accused 1", "Complainant 1"],
     caseDisposition: "Open",
@@ -39,6 +41,8 @@ const dummyCases = [
     PredictedHearings: 3,
     SectionList: [96],
     ActsList: ["CODE OF CIVIL PROCEDURE, 1908 (HB)"],
+    age: 45,
+    hearing: 47,
   },
   {
     caseNumber: "CASE003",
@@ -49,7 +53,7 @@ const dummyCases = [
     caseParties: ["Party C", "Party D"],
     caseFilingDate: new Date("2023-03-10"),
     caseStatus: "Closed",
-    judicialOfficer:"65108659ef2f25e7730d61f8", // You can replace this with a valid ObjectID
+    judicialOfficer: "65108659ef2f25e7730d61f8", // You can replace this with a valid ObjectID
     advocates: ["Advocate 3", "Advocate 4"],
     partiesInvolved: ["Party C", "Party D"],
     caseDisposition: "Settled",
@@ -57,6 +61,8 @@ const dummyCases = [
     PredictedHearings: 1,
     SectionList: [457],
     ActsList: ["Code of Criminal Procedure"],
+    age: 10,
+    hearing: 12,
   },
   {
     caseNumber: "CASE004",
@@ -76,6 +82,8 @@ const dummyCases = [
     PredictedHearings: 4,
     SectionList: [24],
     ActsList: ["CODE OF CIVIL PROCEDURE, 1908 (HB)"],
+    age: 45,
+    hearing: 123,
   },
   {
     caseNumber: "CASE005",
@@ -95,15 +103,17 @@ const dummyCases = [
     PredictedHearings: 0,
     SectionList: [420],
     ActsList: ["The Indian Penal Code"],
+    age: 25,
+    hearing: 34,
   },
 ];
 
 module.exports = dummyCases;
 
-CaseNew.insertMany(dummyCases)
-    .then(() => {
-      console.log("Dummy cases inserted successfully");
-    })
-    .catch((error) => {
-      console.error("Error inserting dummy cases:", error);
-    });
+// CaseNew.insertMany(dummyCases)
+//     .then(() => {
+//       console.log("Dummy cases inserted successfully");
+//     })
+//     .catch((error) => {
+//       console.error("Error inserting dummy cases:", error);
+//     });
