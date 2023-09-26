@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Sidebar from '../components/Sidebar';
 import JudgeList from './JudgeList';
 import '../styles/AdministratorDashboard.css'
@@ -8,15 +8,30 @@ import CaseContainer from './CaseContainer';
 
 
 const AdministratorDashboard = () => {
+  const [dashboard, setDashboard] = useState(true)
+  const [Availablity, setAvailablity] = useState(false)
+    const [Schedule, setSchedule] = useState(false)
+    const actions = {
+      dashboard:dashboard,
+      setDashboard,
+      Availablity:Availablity, 
+      setAvailablity, 
+      Schedule:Schedule, 
+      setSchedule
+    }
   return (
     <div className='administratorDashboard'>
-      <Sidebar/>
-      {/* <JudgeList/> */}
-      <CaseContainer/>
-      {/* <div className='ScheduleBox'>
-        <CalenderBox/>
+      <Sidebar {...actions}/>
+      {Schedule && 
+        <CaseContainer/>
+      }
+      {Availablity && <>
+      <JudgeList/>
+      <div className='ScheduleBox'>
         <Scheduler/>
-      </div> */}
+      </div>
+      </>
+      }
     </div>
   )
 }

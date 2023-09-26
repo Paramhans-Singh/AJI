@@ -63,8 +63,8 @@ const App = () => {
 
   const {loginState, setLoginState} = useContext(AuthContext)
   const router = loginState ? AppRouter : AuthRouter
-
-  console.log(loginState)
+  setLoginState(true)
+  // console.log(loginState)
 
   return (
     <div>

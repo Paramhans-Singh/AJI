@@ -12,3 +12,7 @@ module.exports.getJudgeDetails = function(req,res){
   
     return res.json(judgeData);  
 }
+
+module.exports.getJudgeList = function(req,res){
+    return res.json(dummyJudge);
+}

@@ -1,22 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/Sidebar.css'
 
-const Sidebar = () => {
+const Sidebar = ({dashboard,setDashboard,Availablity,setAvailablity,Schedule,setSchedule}) => {
   return (
     <div className='sidebar'>
         <div className='sidebar-header'>
             <span className='header-name'>AJIN</span>
         </div>
         <div className='functionalities'>
-            <div className='functionality'>
+            <div className={dashboard ? "functionality active" : "functionality"} onClick={()=>{
+                setDashboard(!dashboard)
+                setSchedule(false)
+                setAvailablity(false)
+            }}
+            >
                 <i class="fa-solid fa-house-chimney"></i>
                 <span>Dashboard</span>
             </div>
-            <div className='functionality active'>
+            <div className={Availablity ? "functionality active" : "functionality"} onClick={()=>{
+                setAvailablity(!Availablity)
+                setSchedule(false)
+                setDashboard(false)
+            }}>
                 <i class="fa-solid fa-clipboard"></i>
                 <span>Check Availablity</span>
             </div>
-            <div className='functionality'>
+            <div className={Schedule ? "functionality active" : "functionality"} onClick={()=>{
+                setSchedule(!Schedule)
+                setAvailablity(false)
+                setDashboard(false)
+            }}>
                 <i class="fa-solid fa-calendar"></i>
                 <span>Schedule Cases</span>
             </div>

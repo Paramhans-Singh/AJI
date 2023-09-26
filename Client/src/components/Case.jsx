@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../styles/Case.css'
 
-const Case = ({item}) => {
+const Case = ({item,screening,predictHearings}) => {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
     <div className='case'>
@@ -19,15 +19,20 @@ const Case = ({item}) => {
             )
           })}
         </div>
-        <div className='caseAge'>
-          Case Age: 
-          <div className='caseAgeNumber'>{item.caseScore}</div>
-        </div>
-        <div className='caseScore'>
-          Case Score: 
-          <div className='caseScoreNumber'>{item.caseScore}</div>
-        </div>
-        
+        {
+          screening &&
+          <div className='caseAge'>
+            Case Age: 
+            <div className='caseAgeNumber'>{item.caseScore}</div>
+          </div>
+        }
+        {
+          predictHearings &&
+          <div className='caseScore'>
+            Predicted Case Hearings: 
+            <div className='caseScoreNumber'>{item.caseScore}</div>
+          </div>
+        }
         {isExpanded ? <i class="fa-solid fa-caret-up"></i> : <i class="fa-solid fa-caret-down"></i>}
       </div>
         {isExpanded &&

@@ -62,6 +62,18 @@ const caseSchema = new mongoose.Schema(
       type: Date,
       default: Date.now,
     },
+    PredictedHearings:{
+      type: Number,
+      default: 0,
+    },
+    SectionList:{
+      type: Array,
+      default: [],
+    },
+    ActsList: {
+      type: Array,
+      default: [],
+    }
   },
   { timestamps: true }
 );
