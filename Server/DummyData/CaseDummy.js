@@ -41,8 +41,8 @@ const dummyCases = [
     PredictedHearings: 3,
     SectionList: [96],
     ActsList: ["CODE OF CIVIL PROCEDURE, 1908 (HB)"],
-    age: 45,
-    hearing: 47,
+    age: 28,
+    hearing: 40,
   },
   {
     caseNumber: "CASE003",
@@ -82,8 +82,8 @@ const dummyCases = [
     PredictedHearings: 4,
     SectionList: [24],
     ActsList: ["CODE OF CIVIL PROCEDURE, 1908 (HB)"],
-    age: 45,
-    hearing: 123,
+    age: 2,
+    hearing: 12,
   },
   {
     caseNumber: "CASE005",

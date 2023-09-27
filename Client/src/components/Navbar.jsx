@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/Navbar.css'
 import { AuthContext } from '../context/AuthContext';
+import logo from "../assets/logo.jpg";
 
 const Navbar = () => {
   const {loginState, setLoginState} = useContext(AuthContext)
@@ -25,7 +26,7 @@ const Navbar = () => {
     <div className={(active) ? "navbar active":"navbar"}>
         <div className='navbar-logo'>
           <div className="logo-image">
-            {/* <img src="src/assets/images/BG.jpg" alt="logo" /> */}
+            <img src={logo} alt="logo" />
           </div>
           <div>
             <span className='logo-text'>AJI</span>
