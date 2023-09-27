@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="hero-container">
         <div className="hero-title">
           <h1 className="hero-title-text">
-            <strong>AJI: </strong>Streamlining Courts for a Brighter India
+            <strong>AJI: </strong>Streamlining Courts for Brighter India
           </h1>
         </div>
         <div className="hero-text">
